@@ -126,7 +126,7 @@
           <h4 class="form-label">Group Server Access</h4>
 
           <ul class="list-reset">
-            {foreach from="$group_list" item="group"}
+            {foreach from=$group_list item="group"}
             <li class="margin-bottom:half">
               <input type="checkbox" id="group[{$group.gid}]" class="form-check" name="group[]" value="g{$group.gid}" />
               <label for="group[{$group.gid}]" class="form-label form-label:left">
@@ -139,7 +139,7 @@
           <h4 class="form-label">Server Access</h4>
 
           <ul class="list-reset">
-            {foreach from="$server_list" item="server"}
+            {foreach from=$server_list item="server"}
             <li class="margin-bottom:half">
               <input type="checkbox" name="servers[]" id="servers[{$server.sid}]" class="form-check"
                 value="s{$server.sid}" />
@@ -162,7 +162,7 @@
             <option value="c">Custom Permissions</option>
             <option value="n">New Admin Group</option>
             <optgroup label="Groups" style="font-weight:bold;">
-              {foreach from="$server_admin_group_list" item="server_wg"}
+              {foreach from=$server_admin_group_list item="server_wg"}
               <option value='{$server_wg.id}'>{$server_wg.name}</option>
               {/foreach}
             </optgroup>
@@ -181,7 +181,7 @@
             <option value="c">Custom Permissions</option>
             <option value="n">New Admin Group</option>
             <optgroup label="Groups" style="font-weight:bold;">
-              {foreach from="$server_group_list" item="server_g"}
+              {foreach from=$server_group_list item="server_g"}
               <option value='{$server_g.gid}'>{$server_g.name}</option>
               {/foreach}
             </optgroup>

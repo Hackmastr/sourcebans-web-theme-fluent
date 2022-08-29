@@ -29,7 +29,7 @@
     </div>
   </div>
 {else}
-{php} require (TEMPLATES_PATH . "/admin.bans.search.php");{/php}
+
 
 <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>

@@ -89,7 +89,7 @@
                     </label>
                     <select id="server" name="server" class="form-select form-full">
                         <option value="-1">-- Select Server --</option>
-                        {foreach from="$server_list" item="server}
+                        {foreach from=$server_list item="server"}
                             <option value="{$server.sid}" {if $server_selected==$server.sid}selected{/if}>
                                 {$server.hostname}</option>
                         {/foreach}

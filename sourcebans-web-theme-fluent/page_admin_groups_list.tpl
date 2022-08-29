@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$web_group_list" item="group" name="web_group"}
+                    {foreach from=$web_group_list item="group" name="web_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}
@@ -130,7 +130,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$server_group_list" item="group" name="server_admin_group"}
+                    {foreach from=$server_group_list item="group" name="server_admin_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}
@@ -248,7 +248,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$server_list" item="group" name="server_group"}
+                    {foreach from=$server_list item="group" name="server_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}

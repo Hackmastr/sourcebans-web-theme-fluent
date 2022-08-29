@@ -25,7 +25,7 @@
                     Server Port
                 </label>
                 <input type="text" TABINDEX=2 class="form-input form-full" id="port" name="port"
-                    value="{if $port}{$port}{else}{27015}{/if}" />
+                    value="{if $port}{$port}{else}27015{/if}" />
                 <div id="port.msg" class="message message:error margin-top:half" style="display: none;"></div>
             </div>
 
@@ -54,7 +54,7 @@
                     {if !$edit_server}
                         <option value="-2">Please Select...</option>
                     {/if}
-                    {foreach from="$modlist" item="mod"}
+                    {foreach from=$modlist item="mod"}
                         <option value='{$mod.mid}'>{$mod.name}</option>
                     {/foreach}
                 </select>
@@ -77,7 +77,7 @@
                     </label>
 
                     <ul class="form_ul margin-top">
-                        {foreach from="$grouplist" item="group"}
+                        {foreach from=$grouplist item="group"}
                             <li class="margin-bottom:half">
                                 <input type="checkbox" class="form-check" value="{$group.gid}" id="g_{$group.gid}"
                                     name="groups[]" />

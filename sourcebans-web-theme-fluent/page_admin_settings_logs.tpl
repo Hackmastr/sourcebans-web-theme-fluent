@@ -3,7 +3,7 @@
 </div>
 
 <div class="padding">
-    {php} require (TEMPLATES_PATH . "/admin.log.search.php");{/php}
+    {load_template file="admin.log.search"}
 
     <div class="pagination">
         <span>{$page_numbers}</span>
@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                {foreach from="$log_items" item="log"}
+                {foreach from=$log_items item="log"}
                     <tr class="collapse">
                         <td class="text:center">{$log.type_img}</td>
                         <td>{$log.title}</td>

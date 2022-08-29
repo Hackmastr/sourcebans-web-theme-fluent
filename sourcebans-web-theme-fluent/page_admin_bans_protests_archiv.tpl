@@ -35,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$protest_list_archiv" item="protest"}
+                    {foreach from=$protest_list_archiv item="protest"}
                         <tr class="collapse">
                             <td>
                                 {$protest.name}

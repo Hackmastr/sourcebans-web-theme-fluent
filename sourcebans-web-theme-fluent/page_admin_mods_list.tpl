@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$mod_list" item="mod" name="gaben"}
+                    {foreach from=$mod_list item="mod" name="gaben"}
                         <tr id="mid_{$mod.mid}">
                             <td class="text:center">
                                 <img src="images/games/{$mod.icon}" alt="{$mod.mid}" />

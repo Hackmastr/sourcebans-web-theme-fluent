@@ -19,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {foreach from="$server_list" item="server"}
+                        {foreach from=$server_list item="server"}
                             <script>
                                 xajax_ServerHostPlayers({$server.sid});
                             </script>

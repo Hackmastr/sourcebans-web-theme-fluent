@@ -18,7 +18,7 @@
                 {if $group_list}
                     <h3>Server Groups</h3>
 
-                    {foreach from="$group_list" item="group"}
+                    {foreach from=$group_list item="group"}
                         <div class="margin-bottom:half">
                             <input type="checkbox" id="group_{$group.gid}" class="form-check" name="group[]" value="g{$group.gid}"
                                 onclick="" />
@@ -32,7 +32,7 @@
                 {if $server_list}
                     <h3>Servers</h3>
 
-                    {foreach from="$server_list" item="server"}
+                    {foreach from=$server_list item="server"}
                         <div class="margin-bottom:half">
                             <input type="checkbox" class="form-check" name="servers[]" id="server_{$server.sid}"
                                 value="s{$server.sid}" onclick="" />
@@ -55,11 +55,11 @@
         {/if}
 
         <script>
-            {foreach from="$assigned_servers" item="asrv"}
+            {foreach from=$assigned_servers item="asrv"}
                 if($('server_{$asrv.0}'))$('server_{$asrv.0}').checked = true;
                 if($('group_{$asrv[1]}'))$('group_{$asrv[1]}').checked = true;
             {/foreach}
-            {foreach from="$server_list" item="server"}
+            {foreach from=$server_list item="server"}
                 xajax_ServerHostPlayers({$server.sid}, "id", "host_{$server.sid}");
             {/foreach}
         </script>

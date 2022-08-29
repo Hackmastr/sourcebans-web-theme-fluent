@@ -110,7 +110,7 @@
 
                                                     <select class="form-select form-full" id="ban_admin"
                                                         onmouseup="$('admin').checked = true">
-                                                        {foreach from="$admin_list" item="admin}
+                                                        {foreach from=$admin_list item="admin"}
                                                             <option label="{$admin.user}" value="{$admin.aid}">{$admin.user}
                                                             </option>
                                                         {/foreach}
@@ -130,7 +130,7 @@
                                                 <select class="form-select form-full" id="server"
                                                     onmouseup="$('where_banned').checked = true">
                                                     <option label="Web Ban" value="0">Web Ban</option>
-                                                    {foreach from="$server_list" item="server}
+                                                    {foreach from=$server_list item="server"}
                                                         <option value="{$server.sid}" id="ss{$server.sid}">Retrieving
                                                             Hostname...
                                                             ({$server.ip}:{$server.port})</option>

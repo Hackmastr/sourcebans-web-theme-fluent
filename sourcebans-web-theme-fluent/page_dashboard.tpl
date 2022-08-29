@@ -113,14 +113,16 @@
               <th>Type</th>
               <th class="text:left">Name</th>
               <th class="text:left">Date/Time</th>
-              <th>Length</th>
             </tr>
           </thead>
           <tbody>
             {foreach from=$players_blocked item=player}
-              <tr class="collapse" {if $dashboard_lognopopup} onclick="{$player.link_url}" 
-              {else}onclick="{$player.popup}"
-                {/if}>
+              <tr class="collapse"
+                  {if $dashboard_lognopopup} onclick="{$player.link_url}"
+                  {else}onclick="{$player.popup}"{/if}
+
+                  id="{$player.server}"
+              >
                 <td class="text:center">
                   <i class="fas fa-ban fa-lg"></i>
                 </td>
@@ -129,10 +131,6 @@
                 </td>
                 <td>
                   {$player.date}
-                </td>
-                <td
-                  class="listtable_1{if $player.unbanned}_unbanned{elseif $player.perm}_permanent{elseif $player.temp}_banned{/if}">
-                  {$player.length}{if $player.unbanned} ({$player.ub_reason}){/if}
                 </td>
               </tr>
             {/foreach}
