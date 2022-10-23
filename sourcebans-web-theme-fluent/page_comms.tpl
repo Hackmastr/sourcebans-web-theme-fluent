@@ -165,13 +165,13 @@
                           <span><i class="fas fa-hourglass-half"></i> Block length</span>
                           <span>{$ban.banlength}</span>
                         </li>
-                        {if $ban.unbanned}
+                        {if isset($ban.unbanned)}
                           <li>
                             <span><i class="fas fa-user-shield"></i> Unblock reason</span>
-                            {if $ban.ureason == ""}
+                            {if $ban.ub_reason == ""}
                               <span class="text:italic">No reason present</span>
                             {else}
-                              <span>{$ban.ureason}</span>
+                              <span>{$ban.ub_reason}</span>
                             {/if}
                           </li>
                           <li>
